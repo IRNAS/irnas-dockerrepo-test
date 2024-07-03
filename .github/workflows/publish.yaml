@@ -41,7 +41,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64,linux/arm64
           provenance: false
-          tags: ghcr.io/${{ github.repository_owner }}/vanilla-zephyr-ci:${{ matrix.variant.zephyr_version}}
+          tags: ghcr.io/irnas/vanilla-zephyr-ci:${{ matrix.variant.zephyr_version}}
           build-args: |
             ZEPHYR_VERSION=${{ matrix.variant.zephyr_version }}
             MCUBOOT_VERSION=${{ matrix.variant.mcuboot_version }}
@@ -54,7 +54,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64,linux/arm64
           provenance: false
-          tags: ghcr.io/${{ github.repository_owner }}/vanilla-zephyr-ci:${{ matrix.variant.zephyr_version}}
+          tags: ghcr.io/irnas/vanilla-zephyr-ci:${{ matrix.variant.zephyr_version}}
           build-args: |
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/zephyr:base-${{ matrix.sdk }}SDK
             ZEPHYR_VERSION=${{ matrix.variant.zephyr_version }}
