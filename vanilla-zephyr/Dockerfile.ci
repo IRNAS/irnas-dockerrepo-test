@@ -32,9 +32,7 @@ RUN \
   device-tree-compiler \
   dfu-util \
   file \
-  g++-multilib \
   gcc \
-  gcc-multilib \
   git \
   gperf \
   lcov \
