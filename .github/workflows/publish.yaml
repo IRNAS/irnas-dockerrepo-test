@@ -34,7 +34,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push ci image
-        id: build-and-push
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -48,7 +47,6 @@ jobs:
             MCUBOOT_VERSION=${{ matrix.variant.mcuboot_version }}
 
       - name: Build and push dev image
-        id: build-and-push
         uses: docker/build-push-action@v5
         with:
           context: .
